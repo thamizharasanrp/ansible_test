@@ -1,0 +1,14 @@
+---
+ - name: Instaling the webserver 
+   hosts: mydb 
+   gather_facts: false 
+   become: yes
+   tasks:
+   - name: install the httpd 
+     package:
+       name: httpd 
+       state: present 
+   - name: Install the git 
+     package:
+       name: git
+       state: present    
